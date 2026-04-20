@@ -81,3 +81,34 @@ h1 {
 .nav-bar:hover a{
     color: white;
 }
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-bar img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .nav-bar a {
+        font-size: 10px;
+        margin-right: 0;
+    }
+
+    #título-página-1 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-h1 {
+        font-size: 1.3rem;
+    }
+}
