@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Porfolio | Abel Cano</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-d6B3AwkFQzFsf49vO/k7/lv/++S1URZx3p3dqvLFh3zH1aO7l1lH9O6OWbMfW2Jz2i3hPqM6W81pHTU5VgJ7NQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contacto | Abel Cano</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/svg+xml" href="./images/logo-web.svg" sizes="64x64">
+        <link rel="icon" type="image/svg+xml" href="./images/logo-web.svg" sizes="64x64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
@@ -25,7 +24,27 @@
         <a href="#">Lenguajes</a>
         <a href="./contacto.html">Contacto</a>
     </div>
-    <h1 id="título-página-1"><span class="hola">Hola me presento, soy </span></h1>
-    <h1><span class="portfolio-h1">Abel Cano</span></h1>
+    <h1 id="contacto-titulo">Contacto</h1>
+    <div class="linea-horizontal"></div>
+    <div class="formulario-contacto">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu mail de contacto" required>
+        <textarea id="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="button" onclick="enviarEmail()">Enviar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("TU PUBLIC KEY EN emailjs.com");
+
+        function enviarEmail() {
+            emailjs.send("EL SERVICE ID EN emailjs.com","EL ID DEL TEMPLATE EN emailjs.com", {
+                nombre: document.getElementById("nombre").value,
+                email: document.getElementById("email").value,
+                mensaje: document.getElementById("mensaje").value,
+            })
+            .then(() => alert("¡Mensaje enviado!"))
+            .catch((error) => alert("Error: " + JSON.stringify(error)))
+        }
+    </script>
 </body>
 </html>
