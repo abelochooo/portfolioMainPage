@@ -27,6 +27,7 @@ Una plantilla minimalista y lista para usar para crear tu portfolio personal. In
 | Links del navbar | `index.html` → `.nav-bar a` |
 | Tu logo | `images/` → reemplaza el SVG |
 | Colores y fuentes | `style.css` |
+| Valores de EmailJs (TEMPLATE, SERVICE_id, PUBLIC_KEY) | `contacto.html` en `<script>`|
 
 ## 📁 Estructura
 
@@ -44,6 +45,7 @@ portfolioMainPage/
 - CSS3
 - [Google Fonts — Lexend](https://fonts.google.com/specimen/Lexend)
 - [Font Awesome 6](https://fontawesome.com/)
+- EmailJS
 
 ## 📄 Licencia
 
