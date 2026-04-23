@@ -53,21 +53,33 @@ h1 {
     gap: 1rem;
     justify-content: flex-end;
     align-items: center;
-    transition: width .5s ease;
+    transition: width .5s ease, box-shadow 1s ease;
    
 }
 
-.nav-bar img{
+.nav-bar:hover{
+    box-shadow: 0 0 100px 10px rgba(255, 255, 255, 0.267);
+}
+
+.nav-bar img, #imagen-logo{
     margin-right: auto;
     background-color: white;
     margin-left: 2%;
     transition: box-shadow 1s ease;
 }
 
-.nav-bar img:hover{
-    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.375);
+#imagen-logo{
+    display: inline-flex;
+    width: auto;
 }
 
+#imagen-logo img {
+    display: block;
+}
+
+#imagen-logo:hover {
+    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.375);
+}
 .nav-bar a{
     color: white;
     text-decoration: none;
@@ -184,4 +196,12 @@ h1 {
 
 .formulario-contacto button:hover{
     box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.274);
+}
+
+.nav-bar a{
+    transition:padding 1s ease;
+}
+
+.nav-bar a:not(#imagen-logo):hover{
+    padding: 0px 25px;
 }
