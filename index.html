@@ -29,5 +29,27 @@
     </div>
     <h1 id="título-página-1"><span class="hola">Hola me presento, soy </span></h1>
     <h1><span class="portfolio-h1">Abel Cano</span></h1>
+    <div class="terminal">
+        <div class="header-terminal">
+            <h4>abel@root</h4>
+        </div>
+        <div class="terminal-pantalla">
+        <p class="linea"><span id="inicio-terminal">abel@root $</span> ls</p>
+        <p class="linea"><span id="inicio-terminal">abel@root $</span> <span id="color-azul-texto-terminal">Escritorio Documentos Musica Descargas Portfolio</span></p>
+        <p class="linea"><span id="inicio-terminal">abel@root $</span> cd Portfolio</p>
+        <p class="linea"><span id="inicio-terminal">abel@root $</span> ls</p>
+        <p class="linea"><span id="inicio-terminal">abel@root $</span> index.html style.css README.md script.js <span id="color-azul-texto-terminal"> images </span></p>
+        </div>
+    </div>
+
+    <script>
+    const lineas = document.querySelectorAll(".linea");
+
+    lineas.forEach((linea, i) => {
+      setTimeout(() => {
+        linea.classList.add("visible");
+      }, i * 4500); 
+    });
+</script>
 </body>
 </html>
