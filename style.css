@@ -95,36 +95,6 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
-    .nav-bar {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 0;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .nav-bar img {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .nav-bar a {
-        font-size: 10px;
-        margin-right: 0;
-    }
-
-    #título-página-1 {
-        font-size: 1.5rem;
-    }
-
-    .portfolio-h1 {
-        font-size: 1.3rem;
-    }
-}
-
 #contacto-titulo{
     font-family: "Lexend", sans-serif;
     margin-top: 2%;
@@ -273,4 +243,99 @@ h1 {
 
 .linea.visible {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        height: auto;
+    }
+
+    /* NAVBAR */
+    .nav-bar{
+        flex-direction: row;
+        height: auto;
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+
+    .nav-bar a{
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    #imagen-logo{
+        margin-left: 10px;
+    }
+
+    /* TITULOS */
+    #título-página-1{
+        font-size: 1.8rem;
+    }
+
+    .portfolio-h1{
+        font-size: 1.5rem;
+    }
+
+    #contacto-titulo{
+        font-size: 24px;
+    }
+
+    /* FORMULARIO */
+    .formulario-contacto input,
+    .formulario-contacto textarea{
+        width: 85%;
+    }
+
+    .formulario-contacto textarea{
+        height: 150px;
+    }
+
+    /* TERMINAL */
+    .terminal{
+        width: 90%;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .terminal-pantalla{
+        font-size: 12px;
+    }
+
+    /* LINEA */
+    .linea-horizontal{
+        width: 70%;
+    }
+}
+
+
+/* 📲 MÓVILES PEQUEÑOS */
+@media (max-width: 480px) {
+
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-bar a{
+        font-size: 11px;
+    }
+
+    #título-página-1{
+        font-size: 1.5rem;
+    }
+
+    .portfolio-h1{
+        font-size: 1.2rem;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea{
+        width: 95%;
+    }
+
+    .terminal{
+        width: 95%;
+    }
 }
